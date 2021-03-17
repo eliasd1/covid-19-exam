@@ -1,0 +1,39 @@
+nav{
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    font-size:2em;
+    padding:2%;
+}
+
+.totals{
+    display: flex;
+    justify-content: space-around;
+    /* padding: 1.5% 0.5%; */
+    font-size: 1.5em;
+    margin: 2% 0;
+}
+.container{
+    padding:1%;
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    column-gap: 5vw;
+    row-gap: 5vh;
+    justify-content: center;
+}
+.cards{
+    padding:0.25%;
+    text-align: center;
+    border: 1px solid black;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:40vh;
+}

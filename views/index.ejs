@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-</head>
-<body> 
-    <section id = 'headerSection'>
-        <h1>COVID 19</h1> 
-        <h3>Covid19 Statistics</h3>
-        <p>A website to provide you with all the updates on Covid-19 statistics around the world</p>
-    </section>
-    <header>
-        <nav></nav>
-    </header>
+<%- include('./partials/header') %> 
     <main>
-        <p>World Total Statistics</p>
-        <% Object.keys(total).forEach(key => { %>
-            <p>Total <%= key.split('Total')[1] %>: <%= total[key] %> </p>
-        <% }) %>
-        <form action="/getCountryResult" method="GET">
-            <input name = "country" type="text" required>
-            <input name = 'from' type="date" required>
-            <input name = 'to' type="date" required>
-            <button>Search</button>
-        </form>
+        <h3 class = 'title'>World Total Statistics</h3 class = 'title'>
+        <section class = 'totals'>
+            <% Object.keys(total).forEach(key => { %>
+                <p>Total <%= key.split('Total')[1] %>: <%= total[key] %> </p>
+            <% }) %>
+        </section>
+        <section class = 'formSection'>
+            <h3 class = 'title'>Get Statistics for a specific country</h3>
+            <form action="/getCountryResult" method="GET">
+                <input name = "country" type="text" required>
+                <input name = 'from' type="date" required>
+                <input name = 'to' type="date" required>
+                <button>Search</button>
+            </form>
+        </section>
+        
     </main>
     <footer></footer>
     <script>
