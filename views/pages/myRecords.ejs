@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <% if (records.length) { %>
+            <% records.forEach(record => { %>
+                <h1>Country: <%= record.country %> </h1>
+                <p>Date: <%= record.date %> </p>
+                <form action="/myRecords/<%= record.id %>" method="GET">
+                    <button>VIEW DETAILS</button>
+                </form>
+            <% }) %>
+        <% } else { %>
+            <h1>NO AVAILABLE RECORDS</h1>
+        <% } %>
+    </main>
+</body>
+</html>

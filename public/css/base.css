@@ -1,0 +1,8 @@
+html,body{
+    height:100%;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 40vh 7vh 1fr 7vh;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h3>Country: <%= record.country %></h3>
+        <p>Total Confirmed Cases: <%= record.totalconfirmed %> </p>
+        <p>Total Death Cases: <%= record.totaldeaths %> </p>
+        <p>Total Recovered Cases: <%= record.totalrecovered %> </p>
+        <p>Date: <%= record.date %> </p>
+        <form action="/myRecords/<%= record.id %>?_method=DELETE" method = "POST">
+            <button>Delete</button>
+        </form>
+    </main>
+</body>
+</html>
